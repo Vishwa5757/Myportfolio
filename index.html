@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vishwanathan R — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-text">
+        <span class="loader-name">VR</span>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+        <span class="loader-percent" id="loaderPercent">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CANVAS BACKGROUND -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">[</span>VR<span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+        <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+        <li><a href="#education" class="nav-link" data-text="Education">Education</a></li>
+        <li><a href="#certifications" class="nav-link" data-text="Certs">Certs</a></li>
+        <li><a href="#contact" class="nav-link cta-link" data-text="Hire Me">Hire Me</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mob-link">01 — About</a></li>
+      <li><a href="#skills" class="mob-link">02 — Skills</a></li>
+      <li><a href="#education" class="mob-link">03 — Education</a></li>
+      <li><a href="#certifications" class="mob-link">04 — Certifications</a></li>
+      <li><a href="#contact" class="mob-link">05 — Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="hero">
+    <div class="hero-bg-text" aria-hidden="true">DEVELOPER</div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">MCA Candidate · Tamil Nadu, India</span>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="name-line" data-text="VISHWA">VISHWA</span>
+        <span class="name-line accent-line" data-text="NATHAN">NATHAN</span>
+        <span class="name-initial">R</span>
+      </h1>
+
+      <div class="hero-role">
+        <span class="role-prefix">&gt; </span>
+        <span class="typed-output" id="typedOutput"></span>
+        <span class="cursor-blink">_</span>
+      </div>
+
+      <p class="hero-bio">
+        Motivated &amp; detail-oriented computer science enthusiast eager to build
+        smart automation solutions and contribute to forward-thinking teams.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary magnetic">
+          <span class="btn-inner">Let's Connect</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#skills" class="btn-ghost magnetic">
+          <span>View Skills</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-block">
+        <div class="stat-num" data-count="3">0</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-block">
+        <div class="stat-num" data-count="7">0</div>
+        <div class="stat-label">Tools Mastered</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-block">
+        <div class="stat-num" data-count="2025">0</div>
+        <div class="stat-label">MCA Graduate</div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-tag reveal-up">// about_me</div>
+      <h2 class="section-title reveal-up">Who I Am</h2>
+
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <p class="about-para">
+            I'm <strong>Vishwanathan R</strong>, an MCA student at Hindusthan College
+            of Engineering &amp; Technology with a strong foundation in computer science
+            earned during my B.Sc. at NPR College, Dindigul.
+          </p>
+          <p class="about-para">
+            My passion lies at the intersection of <em>automation</em>, <em>database
+            management</em>, and <em>web technologies</em> — transforming complex
+            workflows into elegant, efficient solutions.
+          </p>
+          <p class="about-para">
+            Beyond the screen, I actively participated in the
+            <strong>National Service Scheme (NSS)</strong>, contributing to community
+            welfare — a reminder that technology should serve people.
+          </p>
+        </div>
+
+        <div class="about-right reveal-right">
+          <div class="info-table">
+            <div class="info-row">
+              <span class="info-key">DOB</span>
+              <span class="info-sep">—</span>
+              <span class="info-val">05 June 2003</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Location</span>
+              <span class="info-sep">—</span>
+              <span class="info-val">Dindigul, Tamil Nadu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Languages</span>
+              <span class="info-sep">—</span>
+              <span class="info-val">Tamil · English</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Nationality</span>
+              <span class="info-sep">—</span>
+              <span class="info-val">Indian</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Status</span>
+              <span class="info-sep">—</span>
+              <span class="info-val highlight">Open to Work ●</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Email</span>
+              <span class="info-sep">—</span>
+              <span class="info-val small">vishwanathan7879@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SKILLS ═══════════════ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-tag reveal-up">// technical_skills</div>
+      <h2 class="section-title reveal-up">My Arsenal</h2>
+
+      <div class="skills-layout">
+        <div class="skills-col reveal-left">
+          <h3 class="skills-col-title">
+            <span class="col-icon">{ }</span> Programming
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item" data-skill="Python" data-pct="80">
+              <div class="skill-meta">
+                <span class="skill-name">Python</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-item" data-skill="HTML5" data-pct="85">
+              <div class="skill-meta">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-item" data-skill="CSS3" data-pct="75">
+              <div class="skill-meta">
+                <span class="skill-name">CSS3</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-col reveal-right">
+          <h3 class="skills-col-title">
+            <span class="col-icon">⚙</span> Tools &amp; Software
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item" data-skill="UiPath RPA" data-pct="78">
+              <div class="skill-meta">
+                <span class="skill-name">UiPath (RPA)</span>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-item" data-skill="Katalon Studio" data-pct="72">
+              <div class="skill-meta">
+                <span class="skill-name">Katalon Studio</span>
+                <span class="skill-pct">72%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-item" data-skill="Oracle DB" data-pct="70">
+              <div class="skill-meta">
+                <span class="skill-name">Oracle Database</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-item" data-skill="MS Office" data-pct="90">
+              <div class="skill-meta">
+                <span class="skill-name">MS Office Suite</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Tech Pills -->
+      <div class="tech-pills reveal-up">
+        <span class="pill">Python</span>
+        <span class="pill">HTML5</span>
+        <span class="pill">CSS3</span>
+        <span class="pill">UiPath</span>
+        <span class="pill">Katalon</span>
+        <span class="pill">Oracle DB</span>
+        <span class="pill">MS Office</span>
+        <span class="pill">RPA</span>
+        <span class="pill">Automation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EDUCATION ═══════════════ -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-tag reveal-up">// education_path</div>
+      <h2 class="section-title reveal-up">Academic Journey</h2>
+
+      <div class="timeline">
+        <div class="timeline-track"></div>
+
+        <div class="tl-item reveal-tl" data-delay="0">
+          <div class="tl-marker">
+            <div class="tl-ring"></div>
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-period">2025 — Present</div>
+            <h3 class="tl-degree">Master of Computer Applications</h3>
+            <p class="tl-school">Hindusthan College of Engineering &amp; Technology</p>
+            <div class="tl-badge">Pursuing</div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal-tl" data-delay="150">
+          <div class="tl-marker">
+            <div class="tl-ring"></div>
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-period">2022 — 2025</div>
+            <h3 class="tl-degree">B.Sc. Computer Science</h3>
+            <p class="tl-school">NPR College of Arts and Science, Dindigul</p>
+            <div class="tl-badge completed">Completed</div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal-tl" data-delay="300">
+          <div class="tl-marker">
+            <div class="tl-ring"></div>
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-period">2022</div>
+            <h3 class="tl-degree">Higher Secondary Certificate</h3>
+            <p class="tl-school">St. Mary's Higher Secondary School, Dindigul</p>
+            <div class="tl-badge completed">Completed</div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal-tl" data-delay="450">
+          <div class="tl-marker">
+            <div class="tl-ring"></div>
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-period">2020</div>
+            <h3 class="tl-degree">Secondary School Leaving Certificate</h3>
+            <p class="tl-school">MSP Solai Nadar Memorial Higher Secondary School</p>
+            <div class="tl-badge completed">Completed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CERTIFICATIONS ═══════════════ -->
+  <section id="certifications" class="section section-alt">
+    <div class="container">
+      <div class="section-tag reveal-up">// certifications</div>
+      <h2 class="section-title reveal-up">Credentials</h2>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal-up" data-delay="0">
+          <div class="cert-glow"></div>
+          <div class="cert-icon-wrap">
+            <div class="cert-icon">🤖</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">UiPath</div>
+            <h3 class="cert-title">Introduction to Automation</h3>
+            <div class="cert-tag">RPA</div>
+          </div>
+          <div class="cert-verified">
+            <span class="verified-dot"></span>Verified
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up" data-delay="100">
+          <div class="cert-glow purple"></div>
+          <div class="cert-icon-wrap purple">
+            <div class="cert-icon">🧪</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Katalon Studio</div>
+            <h3 class="cert-title">Introduction to Katalon</h3>
+            <div class="cert-tag purple">Testing</div>
+          </div>
+          <div class="cert-verified">
+            <span class="verified-dot purple"></span>Verified
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up" data-delay="200">
+          <div class="cert-glow orange"></div>
+          <div class="cert-icon-wrap orange">
+            <div class="cert-icon">🗄️</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Oracle</div>
+            <h3 class="cert-title">Introduction to Oracle Database</h3>
+            <div class="cert-tag orange">Database</div>
+          </div>
+          <div class="cert-verified">
+            <span class="verified-dot orange"></span>Verified
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-tag reveal-up">// get_in_touch</div>
+      <h2 class="section-title reveal-up">Contact Me</h2>
+
+      <div class="contact-layout">
+        <div class="contact-left reveal-left">
+          <p class="contact-intro">
+            I'm actively looking for entry-level opportunities in software development,
+            automation, or database roles. Let's build something great together.
+          </p>
+          <div class="contact-cards">
+            <a href="tel:+919843648286" class="contact-card">
+              <div class="cc-icon">📱</div>
+              <div class="cc-info">
+                <div class="cc-label">Phone</div>
+                <div class="cc-value">+91 98436 48286</div>
+              </div>
+              <div class="cc-arrow">→</div>
+            </a>
+            <a href="mailto:vishwanathan7879@gmail.com" class="contact-card">
+              <div class="cc-icon">✉️</div>
+              <div class="cc-info">
+                <div class="cc-label">Email</div>
+                <div class="cc-value">vishwanathan7879@gmail.com</div>
+              </div>
+              <div class="cc-arrow">→</div>
+            </a>
+            <div class="contact-card">
+              <div class="cc-icon">📍</div>
+              <div class="cc-info">
+                <div class="cc-label">Location</div>
+                <div class="cc-value">Dindigul, Tamil Nadu — 624002</div>
+              </div>
+              <div class="cc-arrow">→</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right reveal-right">
+          <div class="availability-card">
+            <div class="avail-header">
+              <div class="avail-dot"></div>
+              <span>Currently Available</span>
+            </div>
+            <p class="avail-text">
+              Open to full-time roles, internships, and freelance projects in
+              automation, web development, and database management.
+            </p>
+            <a href="mailto:vishwanathan7879@gmail.com" class="btn-primary full magnetic">
+              <span class="btn-inner">Send a Message</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">[VR]</div>
+      <p class="footer-text">
+        Crafted with precision by <strong>Vishwanathan R</strong> · Dindigul, Tamil Nadu
+      </p>
+      <p class="footer-copy">© 2025 All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
